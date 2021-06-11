@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary">
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/colorPrimary"
+        tools:targetApi="lollipop">
+        <fragment
+            android:id="@+id/PictureSettingFragment"
+            android:name="com.example.camera2.fragment.PictureSettingFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <com.example.camera2.surfaceview.Camera2SurfaceView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+    </com.example.camera2.surfaceview.Camera2SurfaceView>
+
+
+    <LinearLayout
+        android:id="@+id/function"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/control"
+        android:padding="10dp"
+        android:background="#000000">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="录像"
+            android:layout_marginBottom="10dp"
+            android:textColor="#ffffff"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/pictures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拍照"
+            android:layout_marginBottom="10dp"
+            android:textColor="#ffffff"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/delayed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="延时"
+            android:layout_marginBottom="10dp"
+            android:textColor="#ffffff"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/control"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:background="#000000">
+        <fragment
+            android:id="@+id/TakePictureFragment"
+            android:name="com.example.camera2.fragment.TakePictureFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</RelativeLayout>

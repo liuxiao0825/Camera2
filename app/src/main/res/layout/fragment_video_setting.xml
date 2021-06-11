@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.VideoSettingFragment">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/colorPrimary"
+        tools:targetApi="lollipop">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/video_flash_on"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:src="@drawable/ic_flash"/>
+            <ImageView
+                android:id="@+id/video_flash_off"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_flash_off"/>
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <Chronometer
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:padding="10dp"
+                android:layout_gravity="center_vertical"
+                android:text="录制时间："
+                android:textColor="#fff"
+                android:visibility="gone"/>
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <ImageView
+                android:id="@+id/video_setting"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:src="@drawable/ic_setting"/>
+        </LinearLayout>
+    </Toolbar>
+
+
+</FrameLayout>
